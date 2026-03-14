@@ -4,6 +4,20 @@
 
 <h1>Products</h1>
 
+<h3>Add Product</h3>
+
+<form method="POST">
+{% csrf_token %}
+
+<input name="name" placeholder="Product Name" required>
+<input name="sku" placeholder="SKU" required>
+
+<button type="submit">Add Product</button>
+
+</form>
+
+<br><br>
+
 <table border="1">
 
 <tr>

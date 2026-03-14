@@ -1,6 +1,7 @@
 from django.db import models
 from products.models import Product
 from inventory.models import Warehouse
+from inventory.services import process_receipt, process_delivery
 
 # Create your models here.
 

@@ -1,0 +1,115 @@
+# ----------------------------
+# Python
+# ----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+
+# Distribution / packaging
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ----------------------------
+# Virtual Environments
+# ----------------------------
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# ----------------------------
+# Environment variables
+# ----------------------------
+.env
+.env.*
+*.env
+
+# ----------------------------
+# Django
+# ----------------------------
+*.log
+*.pot
+*.pyc
+
+# SQLite database
+db.sqlite3
+db.sqlite3-journal
+
+# Django media & static collected files
+media/
+staticfiles/
+
+# Django migrations (optional)
+# comment this if you want migrations in repo
+**/migrations/*
+!**/migrations/__init__.py
+
+# ----------------------------
+# Odoo
+# ----------------------------
+*.pid
+*.log
+*.session
+*.lock
+*.conf
+
+# Odoo filestore
+filestore/
+
+# Odoo local config
+odoo.conf
+
+# ----------------------------
+# IDEs
+# ----------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ----------------------------
+# OS files
+# ----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----------------------------
+# Testing / coverage
+# ----------------------------
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+
+# ----------------------------
+# Jupyter Notebook
+# ----------------------------
+.ipynb_checkpoints
+
+# ----------------------------
+# Temporary files
+# ----------------------------
+*.tmp
+*.temp
+*.swp
+*.bak

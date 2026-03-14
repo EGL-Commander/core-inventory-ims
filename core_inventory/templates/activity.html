@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Stock Activity</h1>
+
+<ul>
+
+{% for a in activity %}
+
+<li>
+{{ a.movement_type }} |
+{{ a.product.name }} |
+{{ a.change }} |
+{{ a.timestamp }}
+</li>
+
+{% endfor %}
+
+</ul>
+
+{% endblock %}

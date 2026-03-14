@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<i class="fa fa-box"></i>
+<h3>Products</h3>
+<h2>{{ products }}</h2>
+</div>
+
+<div class="card">
+<i class="fa fa-warehouse"></i>
+<h3>Warehouses</h3>
+<h2>{{ warehouses }}</h2>
+</div>
+
+<div class="card">
+<i class="fa fa-receipt"></i>
+<h3>Receipts</h3>
+<h2>{{ receipts }}</h2>
+</div>
+
+<div class="card">
+<i class="fa fa-truck"></i>
+<h3>Deliveries</h3>
+<h2>{{ deliveries }}</h2>
+</div>
+
+</div>
+
+{% endblock %}

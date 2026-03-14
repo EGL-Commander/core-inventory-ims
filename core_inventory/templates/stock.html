@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Stock</h1>
+
+<table border="1">
+
+<tr>
+<th>Product</th>
+<th>Warehouse</th>
+<th>Quantity</th>
+</tr>
+
+{% for s in stock %}
+
+<tr>
+<td>{{ s.product.name }}</td>
+<td>{{ s.warehouse.name }}</td>
+<td>{{ s.quantity }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

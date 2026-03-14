@@ -38,4 +38,12 @@
 <h2>{{ stock }}</h2>
 </div>
 
+<h2>Recent Activity</h2>
+
+<ul>
+{% for r in recent %}
+<li>{{ r.product.name }} | {{ r.change }} | {{ r.timestamp }}</li>
+{% endfor %}
+</ul>
+
 {% endblock %}

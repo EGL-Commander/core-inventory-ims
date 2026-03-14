@@ -9,12 +9,15 @@ def dashboard_page(request):
 
     total_stock = Stock.objects.aggregate(total=Sum("quantity"))["total"] or 0
 
+    recent = StockLedger.objects.order_by("-timestamp")[:5]
+
     context = {
         "products": Product.objects.count(),
         "warehouses": Warehouse.objects.count(),
         "receipts": Receipt.objects.count(),
         "deliveries": Delivery.objects.count(),
-        "stock": total_stock
+        "stock": total_stock,
+        "recent": recent,
     }
 
     return render(request,"dashboard.html",context)

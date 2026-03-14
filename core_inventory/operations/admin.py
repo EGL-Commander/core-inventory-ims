@@ -3,9 +3,22 @@ from .models import Receipt, ReceiptItem, Delivery, DeliveryItem, Transfer, Adju
 
 # Register your models here.
 
-admin.site.register(Receipt)
-admin.site.register(ReceiptItem)
-admin.site.register(Delivery)
-admin.site.register(DeliveryItem)
+class ReceiptItemInline(admin.TabularInline):
+    model = ReceiptItem
+    extra = 1
+
+class ReceiptAdmin(admin.ModelAdmin):
+    inlines = [ReceiptItemInline]
+
+class DeliveryItemInline(admin.TabularInline):
+    model = DeliveryItem
+    extra = 1
+
+class DeliveryAdmin(admin.ModelAdmin):
+    inlines = [DeliveryItemInline]
+
+
+admin.site.register(Receipt, ReceiptAdmin)
+admin.site.register(Delivery, DeliveryAdmin)
 admin.site.register(Transfer)
 admin.site.register(Adjustment)
